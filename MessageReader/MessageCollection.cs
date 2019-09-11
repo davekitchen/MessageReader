@@ -9,7 +9,7 @@ namespace MessageReader
     public static class MessageCollection
     {
         [FunctionName("MessageCollection")]
-        public static void Run([QueueTrigger("messagedrop", Connection = "Storage")]string myQueueItem, ILogger log)
+        public static void Run([QueueTrigger("messagedrop", Connection = "AzureWebJobsStorage")]string myQueueItem, ILogger log)
         {
             MessageRecord thisMessage = new MessageRecord(myQueueItem);
 
