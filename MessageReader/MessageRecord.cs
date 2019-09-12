@@ -17,7 +17,6 @@ namespace MessageReader
             this.PartitionKey = DateTime.Today.ToString("yyyyMMdd");
             this.RowKey = string.Concat(DateTime.Now.ToString("HHmmss"), " : ", Guid.NewGuid());
             TheMessage = theMessage;
-
         }
 
         public async Task SaveRecord()
